@@ -1,51 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Telangana SSC Results 2025</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile First -->
+
+    <!-- SEO -->
+    <title>TS SSC Results 2024 - Check Telangana 10th Class Results (Unofficial)</title>
+    <meta name="description" content="Quickly check your TS SSC (Telangana 10th Class) results for 2024. Enter your Hall Ticket number. Fast, reliable, unofficial source.">
+    <meta name="keywords" content="ts ssc results, telangana 10th results, bse telangana results, ssc results 2024, manabadi results, schools9 results, telangana results">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Telangana SSC Results 2025</h1>
-    <p class="subtitle">Official & Trusted Sources to Check Your Results</p>
-  </header>
 
-  <main>
-    <section class="important">
-      <h2>⚠️ Important Notes</h2>
-      <ul>
-        <li>✅ Always try <strong>official sites first</strong>.</li>
-        <li>🌐 Due to heavy traffic, also check popular third-party portals.</li>
-        <li>🎟️ Keep your <strong>Hall Ticket number</strong> ready.</li>
-      </ul>
-    </section>
+    <header>
+        <h1>TS SSC Results 2024 Checker</h1>
+        <!-- UNOFFICIAL DISCLAIMER -->
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong> This is an unofficial portal. Results are sourced from public data. For official results, please visit the <a href="https://bse.telangana.gov.in/" target="_blank" rel="noopener noreferrer">Official BSE Telangana Website</a>.
+        </div>
+    </header>
 
-    <section>
-      <h2>🔗 Official Websites</h2>
-      <ul class="link-list">
-        <li><a href="https://bse.telangana.gov.in" target="_blank">bse.telangana.gov.in</a></li>
-        <li><a href="https://results.bse.telangana.gov.in" target="_blank">results.bse.telangana.gov.in</a></li>
-        <li><a href="https://results.cgg.gov.in" target="_blank">results.cgg.gov.in</a></li>
-      </ul>
-    </section>
+    <main>
+        <!-- STATUS INDICATOR -->
+        <div id="status-message" class="status-info">
+            Loading status...
+            <!-- Example Messages:
+                 "Enter your Hall Ticket Number below."
+                 "Results are officially announced! Enter your Hall Ticket Number."
+                 "Results have not been announced yet. Check back later."
+                 "Fetching results..."
+            -->
+        </div>
 
-    <section>
-      <h2>🌟 Popular Result Portals</h2>
-      <ul class="link-list">
-        <li><a href="https://www.manabadi.co.in" target="_blank">Manabadi</a></li>
-        <li><a href="https://www.schools9.com" target="_blank">Schools9</a></li>
-        <li><a href="https://www.eenadu.net" target="_blank">Eenadu Pratibha / Results</a></li>
-        <li><a href="https://www.sakshieducation.com" target="_blank">Sakshi Education</a></li>
-        <li><a href="https://www.indiaresults.com" target="_blank">India Results</a></li>
-        <li><a href="https://www.examresults.net" target="_blank">ExamResults.net</a></li>
-      </ul>
-    </section>
-  </main>
+        <!-- ERROR MESSAGE AREA -->
+        <div id="error-message" class="error-message" role="alert"></div>
 
-  <footer>
-    <p>© 2025 Telangana Results Info. All rights reserved.</p>
-  </footer>
+        <!-- INPUT FORM -->
+        <form id="result-form">
+            <label for="hallticket">Enter Hall Ticket Number:</label>
+            <input type="text" id="hallticket" name="hallticket" required pattern="^\d{10}$" placeholder="e.g., 2412345678" title="Enter your 10-digit Hall Ticket Number">
+            <button type="submit">Get Result</button>
+        </form>
+
+        <!-- RESULT DISPLAY AREA (Initially Hidden) -->
+        <section id="result-display" aria-live="polite" style="display: none;">
+            <h2>Your Result</h2>
+            <p><strong>Name:</strong> <span id="result-name">---</span></p>
+            <p><strong>Hall Ticket No:</strong> <span id="result-htno">---</span></p>
+            <hr>
+            <h3>Subject-wise Marks/Grades:</h3>
+            <table id="result-table">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Marks</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be added dynamically by JS -->
+                    <!-- Example Row:
+                    <tr>
+                        <td>Telugu</td>
+                        <td>95</td>
+                        <td>A1</td>
+                    </tr>
+                     -->
+                </tbody>
+            </table>
+            <hr>
+            <p><strong>Overall Result:</strong> <span id="result-status" class="status-pass">---</span></p> <!-- Add class 'status-fail' if failed -->
+            <p><strong>Overall Grade:</strong> <span id="result-grade">---</span></p>
+
+            <!-- PRINT BUTTON -->
+            <button id="print-button" type="button">Print Result</button>
+        </section>
+
+        <!-- ADDED VALUE SECTIONS -->
+        <section class="info-links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="https://bse.telangana.gov.in/" target="_blank" rel="noopener noreferrer">Official BSE Telangana Website</a></li>
+                <li><a href="#">How Grading System Works (Link)</a></li>
+                <li><a href="#">Re-evaluation/Recounting Info (Link)</a></li>
+                <li><a href="#">Intermediate Admission Info (Link)</a></li>
+                <li><a href="#">Polytechnic (POLYCET) Info (Link)</a></li>
+            </ul>
+        </section>
+
+        <section class="faq">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            <details>
+                <summary>Is this the official website?</summary>
+                <p>No, this is an unofficial portal created to help students quickly access publicly available results. Please always verify with the <a href="https://bse.telangana.gov.in/" target="_blank" rel="noopener noreferrer">official BSE Telangana website</a>.</p>
+            </details>
+            <details>
+                <summary>When will the results be announced?</summary>
+                <p>Please refer to official announcements from BSE Telangana for the exact date and time. We update our status as soon as information is available.</p>
+            </details>
+             <details>
+                <summary>What do I need to check my result?</summary>
+                <p>You will need your 10-digit Hall Ticket number provided on your admit card.</p>
+            </details>
+            <!-- Add more FAQs -->
+        </section>
+
+    </main>
+
+    <footer>
+        <!-- PRIVACY NOTE -->
+        <p class="privacy-note">
+            Your Hall Ticket number is used solely to fetch and display your result. We do not store this information long-term.
+        </p>
+        <p>© 2024 Your Site Name (Unofficial Results Portal)</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
