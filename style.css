@@ -1,0 +1,91 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f9fafb;
+  color: #222;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background: #007acc;
+  color: white;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+}
+header h1 {
+  font-size: 2rem;
+}
+.subtitle {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Sections */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: #007acc;
+  margin-bottom: 0.5rem;
+}
+
+/* Lists */
+.link-list {
+  list-style: none;
+  padding-left: 0;
+}
+.link-list li {
+  background: white;
+  margin: 0.3rem 0;
+  padding: 0.8rem;
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
+.link-list a {
+  text-decoration: none;
+  color: #007acc;
+  font-weight: 500;
+}
+
+.link-list a:hover {
+  text-decoration: underline;
+}
+
+/* Important Section */
+.important {
+  background: #fff7e6;
+  padding: 1rem;
+  border: 1px solid #ffd580;
+  border-radius: 6px;
+}
+.important ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+.important li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #555;
+  font-size: 0.9rem;
+}
